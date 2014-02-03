@@ -1,6 +1,3 @@
-import StrPack: @struct, calcsize, unpack
-
-
 @struct(type NameStr
  ntype::Cshort # VARIABLE TYPE: 1=NUMERIC, 2=CHAR
  nhfun::Cshort # HASH OF NNAME (always 0)
@@ -30,6 +27,6 @@ function show(io::IO, ns::NameStr)
 end
 
 
-const NAMESTR_SIZE = StrPack.calcsize(NameStr)
+const NAMESTR_SIZE = calcsize(NameStr)
 
 
