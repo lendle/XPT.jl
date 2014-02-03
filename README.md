@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/lendle/XPT.jl.png)](https://travis-ci.org/lendle/XPT.jl)
 
+**NOTE** Requires the master version of DataFrames. Get that with `Pkg.checkout("DataFrames")`. I don't know how to specify that in the `REQUIRE` file.
+
 ## About
 
 The XPT package reads SAS® software transport files and converts SAS software datasets to DataFrames.
