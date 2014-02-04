@@ -14,4 +14,6 @@ before_install:
   - sudo apt-get install libpcre3-dev julia -y
 script:
   - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("XPT"))`); Pkg.pin("XPT"); Pkg.resolve()'
+  - julia -e 'Pkg.checkout("DataFrames")'
   - julia -e 'using XPT; @assert isdefined(:XPT); @assert typeof(XPT) === Module'
+  - julia test/XPT.jl
