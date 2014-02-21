@@ -22,7 +22,7 @@ end
 
 function XPTFile(io::IO)
     info = XPTInfo(io)
-    XPTFile("", io, info)
+    XPTFile(io.name, io, info)
 end
 
 closexpt(xpt::XPTFile) = close(xpt.io)

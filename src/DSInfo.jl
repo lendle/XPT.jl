@@ -1,4 +1,3 @@
-
 type DSInfo
     name::ASCIIString
     sasversion::ASCIIString
@@ -10,6 +9,7 @@ type DSInfo
     numvar::Int
     namestrs::Array{NameStr, 1}
 end
+
 function show(io::IO, d::DSInfo)
     println(io, "               Name: ", d.name)
     println(io, "        SAS version: ", d.sasversion)

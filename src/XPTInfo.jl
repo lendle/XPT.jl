@@ -13,6 +13,7 @@ function Base.show(io::IO, x::XPTInfo)
 end
 
 function XPTInfo(io::IO)
+    seekstart(io)
     first_header_record  = readbytes(io, ROW_LENGTH)
     @assert first_header_record[1:48] == LIBRARY_HEADER_RECORD
 

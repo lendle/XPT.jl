@@ -1,4 +1,3 @@
-
 const ROW_LENGTH = 80
 
 const MONTHS = ["JAN" => 1, "FEB" =>  2, "MAR" =>  3, "APR" =>  4,
